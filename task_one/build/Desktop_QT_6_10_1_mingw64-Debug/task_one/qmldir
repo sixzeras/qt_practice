@@ -1,0 +1,6 @@
+module task_one
+typeinfo apptask_one.qmltypes
+prefer :/qt/qml/task_one/
+Main 254.0 Main.qml
+depends QtQuick
+

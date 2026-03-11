@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/">
+    <file alias="/qt/qml/task_one">C:/Users/Daniilosadchi/Documents/task_one/build/Desktop_QT_6_10_1_mingw64-Debug/task_one</file>
+
+  </qresource>
+</RCC>
