@@ -4,21 +4,22 @@
 #include <QObject>
 #include <QStringList>
 #include <QRandomGenerator>
-#include <QQmlEngine>
 
 class Backend : public QObject
 {
     Q_OBJECT
 
-    QML_ELEMENT
-
 public:
     explicit Backend(QObject *parent = nullptr);
-    Q_INVOKABLE QString GetRandomPhrase();
+
+public slots:
+    QString getRandomPhrase();
+
+signals:
+    void phraseChanged(QString newPhrase);
 
 private:
     QStringList m_phrases;
-
 };
 
-#endif // BACKEND_H
+#endif
