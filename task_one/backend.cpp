@@ -1,4 +1,4 @@
-#include <backend.h>
+#include "backend.h"
 
 Backend::Backend(QObject *parent)
     : QObject(parent)
@@ -9,12 +9,16 @@ Backend::Backend(QObject *parent)
               << "հի!";
 }
 
-QString Backend::GetRandomPhrase()
+QString Backend::getRandomPhrase()
 {
     if (m_phrases.isEmpty()) {
-        return "Фраз нет";
+        return "Фразы закончились!";
     }
 
     int index = QRandomGenerator::global()->bounded(m_phrases.size());
-    return m_phrases.at(index);
+    QString phrase = m_phrases.at(index);
+
+    emit phraseChanged(phrase);
+
+    return phrase;
 }
