@@ -10,14 +10,14 @@ qt_standard_project_setup(REQUIRES 6.8)
 
 qt_add_executable(apptask_one
     main.cpp
+    backend.h
+    backend.cpp
 )
 
 qt_add_qml_module(apptask_one
     URI task_one
     QML_FILES
-        Main.qml
-        SOURCES backend.h
-        SOURCES backend.cpp
+    Main.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
